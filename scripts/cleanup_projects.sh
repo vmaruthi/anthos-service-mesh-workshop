@@ -43,6 +43,7 @@ gcloud config set account ${MY_USER}
 echo -e "\n${CYAN}Deleting dev1, dev2 and ops projects...${NC}" 
 gcloud projects delete ${TF_VAR_dev1_project_name} --quiet
 gcloud projects delete ${TF_VAR_dev2_project_name} --quiet
+gcloud projects delete ${TF_VAR_dev3_project_name} --quiet
 gcloud projects delete ${TF_VAR_ops_project_name} --quiet
 
 echo -e "\n${CYAN}Removing shared vpc lien on the host project...${NC}" 
