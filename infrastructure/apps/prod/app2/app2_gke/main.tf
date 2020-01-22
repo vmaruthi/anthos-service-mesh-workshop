@@ -74,7 +74,7 @@ module "create_gke_4_dev2_r2b_subnet_04" {
   source             = "github.com/terraform-google-modules/terraform-google-kubernetes-engine//modules/beta-public-cluster?ref=v5.1.1"
   project_id         = data.terraform_remote_state.app2_project.outputs.dev2_project_id
   name               = var.gke_dev2-r2b
-  kubernetes_version = data.google_container_engine_versions.subnet_04.latest_master_version
+  kubernetes_version = "1.14.8-gke.33"
   region             = var.subnet_04_region
   regional           = false
   zones              = ["${var.subnet_04_region}-b"]
